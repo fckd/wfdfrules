@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B429F71F14ED28EB002B654F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429F71E14ED28EB002B654F /* UIKit.framework */; };
+		B429F72114ED28EB002B654F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429F72014ED28EB002B654F /* Foundation.framework */; };
+		B429F72314ED28EB002B654F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429F72214ED28EB002B654F /* CoreGraphics.framework */; };
+		B429F72914ED28EB002B654F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B429F72714ED28EB002B654F /* InfoPlist.strings */; };
+		B429F72B14ED28EB002B654F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F72A14ED28EB002B654F /* main.m */; };
+		B429F72F14ED28EB002B654F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F72E14ED28EB002B654F /* AppDelegate.m */; };
+		B429F73214ED28EB002B654F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F73114ED28EB002B654F /* MasterViewController.m */; };
+		B429F73514ED28EB002B654F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B429F73414ED28EB002B654F /* DetailViewController.m */; };
+		B429F73814ED28EB002B654F /* MasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B429F73614ED28EB002B654F /* MasterViewController_iPhone.xib */; };
+		B429F73B14ED28EB002B654F /* MasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B429F73914ED28EB002B654F /* MasterViewController_iPad.xib */; };
+		B429F73E14ED28EB002B654F /* DetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B429F73C14ED28EB002B654F /* DetailViewController_iPhone.xib */; };
+		B429F74114ED28EB002B654F /* DetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B429F73F14ED28EB002B654F /* DetailViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B429F71A14ED28EB002B654F /* WFDF Rules 2012.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WFDF Rules 2012.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B429F71E14ED28EB002B654F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B429F72014ED28EB002B654F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B429F72214ED28EB002B654F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B429F72614ED28EB002B654F /* WFDF Rules 2012-Info.plist */ = {isa = PBXFileReference; path = "WFDF Rules 2012-Info.plist"; sourceTree = "<group>"; };
+		B429F72814ED28EB002B654F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B429F72A14ED28EB002B654F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B429F72C14ED28EB002B654F /* WFDF Rules 2012-Prefix.pch */ = {isa = PBXFileReference; path = "WFDF Rules 2012-Prefix.pch"; sourceTree = "<group>"; };
+		B429F72D14ED28EB002B654F /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B429F72E14ED28EB002B654F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B429F73014ED28EB002B654F /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		B429F73114ED28EB002B654F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		B429F73314ED28EB002B654F /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		B429F73414ED28EB002B654F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B429F73714ED28EB002B654F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		B429F73A14ED28EB002B654F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPad.xib; sourceTree = "<group>"; };
+		B429F73D14ED28EB002B654F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		B429F74014ED28EB002B654F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B429F71714ED28EB002B654F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429F71F14ED28EB002B654F /* UIKit.framework in Frameworks */,
+				B429F72114ED28EB002B654F /* Foundation.framework in Frameworks */,
+				B429F72314ED28EB002B654F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B429F70F14ED28EB002B654F = {
+			isa = PBXGroup;
+			children = (
+				B429F72414ED28EB002B654F /* WFDF Rules 2012 */,
+				B429F71D14ED28EB002B654F /* Frameworks */,
+				B429F71B14ED28EB002B654F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B429F71B14ED28EB002B654F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B429F71A14ED28EB002B654F /* WFDF Rules 2012.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B429F71D14ED28EB002B654F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B429F71E14ED28EB002B654F /* UIKit.framework */,
+				B429F72014ED28EB002B654F /* Foundation.framework */,
+				B429F72214ED28EB002B654F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B429F72414ED28EB002B654F /* WFDF Rules 2012 */ = {
+			isa = PBXGroup;
+			children = (
+				B429F72D14ED28EB002B654F /* AppDelegate.h */,
+				B429F72E14ED28EB002B654F /* AppDelegate.m */,
+				B429F73014ED28EB002B654F /* MasterViewController.h */,
+				B429F73114ED28EB002B654F /* MasterViewController.m */,
+				B429F73314ED28EB002B654F /* DetailViewController.h */,
+				B429F73414ED28EB002B654F /* DetailViewController.m */,
+				B429F73614ED28EB002B654F /* MasterViewController_iPhone.xib */,
+				B429F73914ED28EB002B654F /* MasterViewController_iPad.xib */,
+				B429F73C14ED28EB002B654F /* DetailViewController_iPhone.xib */,
+				B429F73F14ED28EB002B654F /* DetailViewController_iPad.xib */,
+				B429F72514ED28EB002B654F /* Supporting Files */,
+			);
+			path = "WFDF Rules 2012";
+			sourceTree = "<group>";
+		};
+		B429F72514ED28EB002B654F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B429F72614ED28EB002B654F /* WFDF Rules 2012-Info.plist */,
+				B429F72714ED28EB002B654F /* InfoPlist.strings */,
+				B429F72A14ED28EB002B654F /* main.m */,
+				B429F72C14ED28EB002B654F /* WFDF Rules 2012-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B429F71914ED28EB002B654F /* WFDF Rules 2012 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B429F74414ED28EB002B654F /* Build configuration list for PBXNativeTarget "WFDF Rules 2012" */;
+			buildPhases = (
+				B429F71614ED28EB002B654F /* Sources */,
+				B429F71714ED28EB002B654F /* Frameworks */,
+				B429F71814ED28EB002B654F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WFDF Rules 2012";
+			productName = "WFDF Rules 2012";
+			productReference = B429F71A14ED28EB002B654F /* WFDF Rules 2012.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B429F71114ED28EB002B654F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B429F71414ED28EB002B654F /* Build configuration list for PBXProject "WFDF Rules 2012" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B429F70F14ED28EB002B654F;
+			productRefGroup = B429F71B14ED28EB002B654F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B429F71914ED28EB002B654F /* WFDF Rules 2012 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B429F71814ED28EB002B654F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429F72914ED28EB002B654F /* InfoPlist.strings in Resources */,
+				B429F73814ED28EB002B654F /* MasterViewController_iPhone.xib in Resources */,
+				B429F73B14ED28EB002B654F /* MasterViewController_iPad.xib in Resources */,
+				B429F73E14ED28EB002B654F /* DetailViewController_iPhone.xib in Resources */,
+				B429F74114ED28EB002B654F /* DetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B429F71614ED28EB002B654F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B429F72B14ED28EB002B654F /* main.m in Sources */,
+				B429F72F14ED28EB002B654F /* AppDelegate.m in Sources */,
+				B429F73214ED28EB002B654F /* MasterViewController.m in Sources */,
+				B429F73514ED28EB002B654F /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B429F72714ED28EB002B654F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F72814ED28EB002B654F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B429F73614ED28EB002B654F /* MasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F73714ED28EB002B654F /* en */,
+			);
+			name = MasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B429F73914ED28EB002B654F /* MasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F73A14ED28EB002B654F /* en */,
+			);
+			name = MasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		B429F73C14ED28EB002B654F /* DetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F73D14ED28EB002B654F /* en */,
+			);
+			name = DetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B429F73F14ED28EB002B654F /* DetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B429F74014ED28EB002B654F /* en */,
+			);
+			name = DetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B429F74214ED28EB002B654F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B429F74314ED28EB002B654F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B429F74514ED28EB002B654F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WFDF Rules 2012/WFDF Rules 2012-Prefix.pch";
+				INFOPLIST_FILE = "WFDF Rules 2012/WFDF Rules 2012-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B429F74614ED28EB002B654F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WFDF Rules 2012/WFDF Rules 2012-Prefix.pch";
+				INFOPLIST_FILE = "WFDF Rules 2012/WFDF Rules 2012-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B429F71414ED28EB002B654F /* Build configuration list for PBXProject "WFDF Rules 2012" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B429F74214ED28EB002B654F /* Debug */,
+				B429F74314ED28EB002B654F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B429F74414ED28EB002B654F /* Build configuration list for PBXNativeTarget "WFDF Rules 2012" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B429F74514ED28EB002B654F /* Debug */,
+				B429F74614ED28EB002B654F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B429F71114ED28EB002B654F /* Project object */;
+}
