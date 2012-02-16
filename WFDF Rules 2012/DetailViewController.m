@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Page.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -16,15 +17,17 @@
 @implementation DetailViewController
 
 @synthesize detailItem = _detailItem;
+@synthesize webView = _webView;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setDetailItem:(Page *)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
+		
         
         // Update the view.
         [self configureView];
@@ -40,7 +43,11 @@
     // Update the user interface for the detail item.
 
 	if (self.detailItem) {
-	    self.detailDescriptionLabel.text = [self.detailItem description];
+		NSLog(@"%@", [self.detailItem title]);
+//		self.detailDescriptionLabel.text = [self.detailItem title];
+	    self.detailDescriptionLabel.text = @"asd";
+		[self.detailDescriptionLabel setText:@"093"];
+//		[self.webView 
 	}
 }
 
@@ -61,6 +68,8 @@
 
 - (void)viewDidUnload
 {
+	[self setWebView:nil];
+	//[self setDetailViewLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -100,7 +109,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.title = NSLocalizedString(@"Detail", @"Detail");
+		//self.title = NSLocalizedString(@"Detail", @"Detail");
     }
     return self;
 }
@@ -109,7 +118,7 @@
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
 {
-    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
+	//barButtonItem.title = NSLocalizedString(@"Master", @"Master");
     [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
     self.masterPopoverController = popoverController;
 }

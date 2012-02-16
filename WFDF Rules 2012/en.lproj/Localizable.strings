@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WFDF Rules 2012
+
+  Created by Claudius Kirsch on 16.02.12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+
+"maintitle" = "WFDF Rules 2009";
+"language" = "Language:";
+"settings" = "Settings";

@@ -9,16 +9,20 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "Page.h"
 
 @implementation MasterViewController
 
 @synthesize detailViewController = _detailViewController;
+@synthesize appDelegate = _appDelegate;
+@synthesize infoViewController, settingsViewController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.title = NSLocalizedString(@"Master", @"Master");
+		self.title = NSLocalizedString(@"Chapters", @"Chapters");
 		if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 		    self.clearsSelectionOnViewWillAppear = NO;
 		    self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
@@ -38,9 +42,51 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	_appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	_appDelegate.tableView = self.tableView;
+	
+	//loading the localized string with an additional comment
+	self.navigationItem.title = NSLocalizedString(@"maintitle", @"Name of the app in the tableView");
+	
+	// buttons
+	UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+	infoButton.backgroundColor = [UIColor clearColor];
+	[infoButton addTarget:self action:@selector(infoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+	// setting up the UIButton as an UIBarButtonItem to position it in the Navigation Bar:
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"flags.png"]  style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed)];
+	
 	// Do any additional setup after loading the view, typically from a nib.
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 	    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+	}
+}
+
+- (void)infoButtonPressed {
+	if(self.infoViewController == nil) {
+		InfoViewController *infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
+		self.infoViewController = infoController;
+	}
+	[self presentModalViewController:infoViewController animated:YES];
+}
+
+-(void)settingsButtonPressed {
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+		if(self.settingsViewController == nil) {
+			SettingsViewController *Controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController_iPhone" bundle:[NSBundle mainBundle]];
+			self.settingsViewController = Controller;
+		}
+		settingsViewController.navItem.title = NSLocalizedString(@"settings", @"settings title");
+		settingsViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+		[self presentModalViewController:settingsViewController animated:YES];
+	} else {
+		if(self.settingsViewController == nil) {
+			SettingsViewController *Controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController_iPhone" bundle:[NSBundle mainBundle]];
+			self.settingsViewController = Controller;
+		}
+
+		[self.navigationController pushViewController:settingsViewController animated:YES];
 	}
 }
 
@@ -89,7 +135,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 1;
+//	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	return [_appDelegate.pages count];
 }
 
 // Customize the appearance of table view cells.
@@ -106,7 +153,25 @@
     }
 
 	// Configure the cell.
-	cell.textLabel.text = NSLocalizedString(@"Detail", @"Detail");
+
+	Page *page = (Page *)[_appDelegate.pages objectAtIndex:indexPath.row];
+	// html content
+	NSString *path = [[NSBundle mainBundle] pathForResource:[page path] ofType:@"html" inDirectory:_appDelegate.languageDirectory];
+	NSFileHandle *readHandle = [NSFileHandle fileHandleForReadingAtPath:path];
+	NSString *htmlString = [[NSString alloc] initWithData:[readHandle readDataToEndOfFile] encoding:NSUTF8StringEncoding];
+	page.content = htmlString;
+	
+	// getting the title + increasing chapter number
+	NSString *title = page.title;
+	NSString *count = [NSString stringWithFormat:@"%d. ", indexPath.row];
+	// leave out the count on the first item:
+	if(indexPath.row == 0 || indexPath.row > 20) {
+		count = @"";
+	}
+
+	cell.textLabel.text = [count stringByAppendingString:title];
+	cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+	
     return cell;
 }
 
@@ -154,8 +219,25 @@
 	    if (!self.detailViewController) {
 	        self.detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController_iPhone" bundle:nil];
 	    }
+		Page *page = (Page *)[_appDelegate.pages objectAtIndex:indexPath.row];
+		self.detailViewController.title = [page title];
+		
+		NSString *path = [[NSBundle mainBundle] pathForResource:[page path] ofType:@"html" inDirectory:_appDelegate.languageDirectory];
+		NSFileHandle *readHandle = [NSFileHandle fileHandleForReadingAtPath:path];
+		
+		NSString *htmlString = [[NSString alloc] initWithData:[readHandle readDataToEndOfFile] encoding:NSUTF8StringEncoding];
+		// creating a baseURL makes loading local files like images + css possible. They then refer to their relative path.
+		NSURL *baseURL = [NSURL fileURLWithPath:path];
+		
         [self.navigationController pushViewController:self.detailViewController animated:YES];
+		[self.detailViewController.webView loadHTMLString:htmlString baseURL:baseURL];
     }
 }
+
+// set a different height for the cells:
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 40.0;
+}
+
 
 @end

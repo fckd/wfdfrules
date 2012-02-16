@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "InfoViewController.h"
+#import "SettingsViewController.h"
 
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
+@property(strong, nonatomic) AppDelegate *appDelegate;
+@property(nonatomic,retain) InfoViewController *infoViewController;
+@property(nonatomic,retain) SettingsViewController *settingsViewController;
 
 @end
