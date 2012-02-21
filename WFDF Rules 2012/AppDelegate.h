@@ -28,5 +28,6 @@
 //@property (assign, nonatomic, readonly) NSInteger primaryKey;
 @property (strong, nonatomic) NSString *title;
 @property(strong, nonatomic) NSString *content;
+@property(nonatomic) NSInteger currentRow;
 
 @end

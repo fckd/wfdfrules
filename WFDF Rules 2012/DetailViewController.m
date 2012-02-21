@@ -18,17 +18,17 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize webView = _webView;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize masterPopoverController = _masterPopoverController;
+@synthesize appDelegate;
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(Page *)newDetailItem
+- (void)setDetailItem:(id)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
 		
-        
+//        NSLog(@"new item");
         // Update the view.
         [self configureView];
     }
@@ -43,11 +43,7 @@
     // Update the user interface for the detail item.
 
 	if (self.detailItem) {
-		NSLog(@"%@", [self.detailItem title]);
 //		self.detailDescriptionLabel.text = [self.detailItem title];
-	    self.detailDescriptionLabel.text = @"asd";
-		[self.detailDescriptionLabel setText:@"093"];
-//		[self.webView 
 	}
 }
 
@@ -62,17 +58,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+//	load initial page
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+		self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];	
+		[self.appDelegate.tableView.delegate tableView:self.appDelegate.tableView didSelectRowAtIndexPath:indexPath];
+	}
+	
 	[self configureView];
 }
 
 - (void)viewDidUnload
 {
 	[self setWebView:nil];
-	//[self setDetailViewLabel:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -109,7 +110,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		//self.title = NSLocalizedString(@"Detail", @"Detail");
+//		self.detailDescriptionLabel.text = NSLocalizedString(@"Detail", @"Detail");
     }
     return self;
 }

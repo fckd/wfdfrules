@@ -12,7 +12,7 @@
 
 @implementation SettingsViewController
 
-@synthesize selectedLanguage, selection, navItem;
+@synthesize selectedLanguage, selection, navItem, popoverController;
 
 -(IBAction)saveSettings:(id)sender {
 	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -30,7 +30,14 @@
 		appDelegate.savedLanguage = selectedLanguage;
 	}
 	
-	[self dismissModalViewControllerAnimated:YES];
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+		[self dismissModalViewControllerAnimated:YES];
+	} else {
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:appDelegate.currentRow inSection:0];
+		[appDelegate.tableView.delegate tableView:appDelegate.tableView didSelectRowAtIndexPath:indexPath];
+		[appDelegate.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:appDelegate.currentRow inSection:0] animated:NO scrollPosition:UITableViewScrollPositionMiddle];
+		[self.popoverController dismissPopoverAnimated:YES];
+	}
 }
 
 
@@ -38,6 +45,15 @@
     [super viewDidLoad];
 	
 	self.navItem.title = NSLocalizedString(@"settings", @"settings title");
+//	if(!self.navigationController) {
+//		self.navigationController = [[UINavigationController alloc] initWithRootViewController:self];
+//		NSLog(@"%@", self.navigationController);
+//	}
+	
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//		self.clearsSelectionOnViewWillAppear = NO;
+		self.contentSizeForViewInPopover = CGSizeMake(320.0, 180.0);
+	}
 }
 
 
@@ -82,6 +98,7 @@
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
+	self.popoverController=nil;
 }
 
 
@@ -126,9 +143,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	return NSLocalizedString(@"language", @"Settings menu header");
-	//return @"Language:";
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];

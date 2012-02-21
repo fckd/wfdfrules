@@ -18,6 +18,7 @@
 @property(nonatomic, retain) NSString *selectedLanguage;
 @property(nonatomic, retain) NSIndexPath *selection;
 @property(nonatomic, retain) UINavigationItem *navItem;
+@property(nonatomic, retain) UIPopoverController *popoverController;
 
 -(IBAction)saveSettings:(id)sender;
 

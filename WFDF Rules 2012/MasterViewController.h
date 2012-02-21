@@ -15,9 +15,12 @@
 
 @interface MasterViewController : UITableViewController
 
-@property (strong, nonatomic) DetailViewController *detailViewController;
+@property(strong, nonatomic) DetailViewController *detailViewController;
 @property(strong, nonatomic) AppDelegate *appDelegate;
-@property(nonatomic,retain) InfoViewController *infoViewController;
-@property(nonatomic,retain) SettingsViewController *settingsViewController;
+@property(strong, nonatomic) InfoViewController *infoViewController;
+@property(strong, nonatomic) SettingsViewController *settingsViewController;
+@property (strong, nonatomic) DetailViewController *mainDetailViewController;
+@property (nonatomic, retain) UIPopoverController *settingsPopover;
+@property (nonatomic, retain) UINavigationController *settingsNavigationController;
 
 @end

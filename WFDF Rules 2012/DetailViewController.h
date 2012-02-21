@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Page.h"
+#import "AppDelegate.h"
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) Page *detailItem;
-@property (unsafe_unretained, nonatomic) IBOutlet UIWebView *webView;
-@property (unsafe_unretained, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (retain, nonatomic) id detailItem;
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
+@property(strong, nonatomic) AppDelegate *appDelegate;
 
 @end

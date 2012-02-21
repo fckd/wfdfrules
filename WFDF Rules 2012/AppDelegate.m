@@ -17,7 +17,7 @@
 @synthesize navigationController = _navigationController;
 @synthesize splitViewController = _splitViewController;
 @synthesize pages, languages, savedLanguage, languageDirectory, tableView;
-@synthesize langs, title, content;
+@synthesize langs, title, content, currentRow;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -31,13 +31,14 @@
 	    MasterViewController *masterViewController = [[MasterViewController alloc] initWithNibName:@"MasterViewController_iPad" bundle:nil];
 	    UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
 	    
-	    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController_iPad" bundle:nil];
+		DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController_iPad" bundle:nil];
 	    UINavigationController *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
 		
 	    self.splitViewController = [[UISplitViewController alloc] init];
 	    self.splitViewController.delegate = detailViewController;
 	    self.splitViewController.viewControllers = [NSArray arrayWithObjects:masterNavigationController, detailNavigationController, nil];
 	    
+		masterViewController.mainDetailViewController = detailViewController;
 	    self.window.rootViewController = self.splitViewController;
 	}
 //	custom code
