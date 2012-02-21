@@ -52,17 +52,25 @@
 	
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 //		self.clearsSelectionOnViewWillAppear = NO;
-		self.contentSizeForViewInPopover = CGSizeMake(320.0, 180.0);
+		self.contentSizeForViewInPopover = CGSizeMake(320.0, 140.0);
+		
+		// save button
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveSettings:)];
 	}
 }
 
 
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//		self.parentViewController.contentSizeForViewInPopover = CGSizeMake(320.0, 140.0);
+		[self.popoverController setPopoverContentSize:CGSizeMake(320.0, 180.0) animated:YES];
+	}
 }
-*/
+
 
 /*
 - (void)viewDidAppear:(BOOL)animated {

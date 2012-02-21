@@ -80,7 +80,7 @@
 		[self presentModalViewController:infoViewController animated:YES];
 	} else {
 		if(!self.infoViewController) {
-			InfoViewController *infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
+			InfoViewController *infoController = [[InfoViewController alloc] initWithNibName:@"InfoViewController_iPad" bundle:[NSBundle mainBundle]];
 			self.infoViewController = infoController;
 			self.infoViewController.title = NSLocalizedString(@"info", nil);
 		}
@@ -99,9 +99,10 @@
 		[self presentModalViewController:settingsViewController animated:YES];
 	} else {
 		if(!self.settingsPopover) {			
-			SettingsViewController *Controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController_iPhone" bundle:[NSBundle mainBundle]];
+			SettingsViewController *Controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController_iPad" bundle:[NSBundle mainBundle]];
 			self.settingsViewController = Controller;
 			self.settingsViewController.title = NSLocalizedString(@"settings", nil);
+			self.settingsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"info",nil) style:UIBarButtonItemStyleBordered target:self action:@selector(infoButtonPressed)];
 			
 			self.settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.settingsViewController];
 			
@@ -110,14 +111,8 @@
 			
 		} else {
 			[self.settingsPopover dismissPopoverAnimated:YES];
+			[self.settingsNavigationController popViewControllerAnimated:YES];
 		}
-		// info button
-		UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-		infoButton.backgroundColor = [UIColor clearColor];
-		[infoButton addTarget:self action:@selector(infoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-		self.settingsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
-//		self.settingsNavigationController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
-		
 		[self.settingsPopover presentPopoverFromBarButtonItem:self.mainDetailViewController.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	}
 }
@@ -127,6 +122,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	self.settingsViewController=nil;
 	self.settingsPopover = nil;
 }
 
