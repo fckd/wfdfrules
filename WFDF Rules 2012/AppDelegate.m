@@ -11,6 +11,12 @@
 #import "DetailViewController.h"
 #import "Page.h"
 
+// private interface, only needed inside this object
+@interface AppDelegate (Private)
+- (void)createEditableCopyOfDatabaseIfNeeded;
+- (void)initializeDatabase;
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -42,21 +48,27 @@
 	    self.window.rootViewController = self.splitViewController;
 	}
 //	custom code
+	[self createEditableCopyOfDatabaseIfNeeded];
+	[self initializeDatabase];
+	
 	self.languages = [[NSMutableArray alloc] initWithObjects:@"English", @"Deutsch", nil];
 	// get the prefs
 	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-	self.savedLanguage = [prefs stringForKey:@"language"];
-	if(savedLanguage == nil) {
-		NSLog(@"Nothing Saved");
-		//[self createPages:@"English"];
-		//set an initial value to savedLanguage to get a checkmark
-		self.savedLanguage = @"English";
-		[self reloadPages:savedLanguage];
-	} else {
-		NSLog(@"Saved Language: %@", savedLanguage);
-		//[self createPages:savedLanguage];
-		[self reloadPages:savedLanguage];
-	}
+//	self.savedLanguage = [prefs stringForKey:@"language"];
+//	if(savedLanguage == nil) {
+//		NSLog(@"Nothing Saved");
+//		//[self createPages:@"English"];
+//		//set an initial value to savedLanguage to get a checkmark
+//		self.savedLanguage = @"English";
+//		[self reloadPages:savedLanguage];
+//	} else {
+//		NSLog(@"Saved Language: %@", savedLanguage);
+//		//[self createPages:savedLanguage];
+//		[self reloadPages:savedLanguage];
+//	}
+	
+	self.savedLanguage = @"English";
+	[self reloadPages:savedLanguage];
 	
     [self.window makeKeyAndVisible];
     return YES;
@@ -64,13 +76,13 @@
 
 -(void)reloadPages:(NSString *)language {	
 	//define the localized path to load the correct files
-	if([language isEqualToString:@"English"]) {
-		self.languageDirectory = @"English.lproj";
-	} else if([language isEqualToString:@"Deutsch"]) {
-		self.languageDirectory = @"German.lproj";
-	}
+//	if([language isEqualToString:@"English"]) {
+//		self.languageDirectory = @"English.lproj";
+//	} else if([language isEqualToString:@"Deutsch"]) {
+//		self.languageDirectory = @"German.lproj";
+//	}
 	
-	[self createPages:language];
+//	[self createPages:language];
 	
 	[self.tableView reloadData];
 }
@@ -154,9 +166,94 @@
 	Page *twentytwo = [[Page alloc] initWithTitle:[data valueForKey:@"22"] path:@"22_copyright"];
 	
 	//[self.pages release];
-	self.pages = [[NSMutableArray alloc] initWithObjects:null,one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty,twentyone,twentytwo,nil];
+//	self.pages = [[NSMutableArray alloc] initWithObjects:null,one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty,twentyone,twentytwo,nil];
 	//[data release];
 }
+
+#pragma mark database
+// Creates a writable copy of the bundled default database in the application Documents directory.
+- (void)createEditableCopyOfDatabaseIfNeeded {
+    // First, test for existence.
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"langs.sqlite"];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    if (success) return;
+    // The writable database does not exist, so copy the default to the appropriate location.
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"langs.sqlite"];
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }
+}
+
+// Open the database connection and retrieve minimal information for all objects.
+- (void)initializeDatabase {
+	NSMutableArray *tablesArray = [[NSMutableArray alloc] init];
+	NSString *currentLanguage = @"german";
+    NSMutableArray *pageArray = [[NSMutableArray alloc] init];
+    self.pages = pageArray;
+    // The database is stored in the application bundle. 
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"langs.sqlite"];
+	
+    // Open the database. The database was prepared outside the application.
+    if (sqlite3_open([path UTF8String], &database) == SQLITE_OK) {
+//		get all table names
+		NSString *tableString = @"SELECT name FROM sqlite_master WHERE type IN ('table','view') AND name NOT LIKE 'sqlite_%' UNION ALL SELECT name FROM sqlite_temp_master WHERE type IN ('table','view') ORDER BY 1";
+		sqlite3_stmt *statement;    
+        if (sqlite3_prepare_v2(database, [tableString UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+            // We "step" through the results - once for each row.
+            while (sqlite3_step(statement) == SQLITE_ROW) {
+				NSString *tableName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 0)];
+//				NSLog(@"%@", tableName);
+                [tablesArray addObject:tableName];
+            }
+        }
+        // "Finalize" the statement - releases the resources associated with the statement.
+        sqlite3_finalize(statement);
+		statement = nil;
+		
+
+        // Get the primary key for all books.
+//        const char *sql = "SELECT key FROM german";
+		NSString *queryString = [NSString stringWithFormat:@"SELECT key FROM %@", currentLanguage];
+//        sqlite3_stmt *statement;
+        // Preparing a statement compiles the SQL query into a byte-code program in the SQLite library.
+        // The third parameter is either the length of the SQL string or -1 to read up to the first null terminator.        
+        if (sqlite3_prepare_v2(database, [queryString UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+            // We "step" through the results - once for each row.
+            while (sqlite3_step(statement) == SQLITE_ROW) {
+                // The second parameter indicates the column index into the result set.
+                int primaryKey = sqlite3_column_int(statement, 0);
+                // We avoid the alloc-init-autorelease pattern here because we are in a tight loop and
+                // autorelease is slightly more expensive than release. This design choice has nothing to do with
+                // actual memory management - at the end of this block of code, all the book objects allocated
+                // here will be in memory regardless of whether we use autorelease or release, because they are
+                // retained by the books array.
+                Page *page = [[Page alloc] initWithPrimaryKey:primaryKey database:database language:currentLanguage];
+                [self.pages addObject:page];
+            }
+        }
+        // "Finalize" the statement - releases the resources associated with the statement.
+        sqlite3_finalize(statement);
+    } else {
+        // Even though the open failed, call close to properly clean up resources.
+        sqlite3_close(database);
+        NSAssert1(0, @"Failed to open database with message '%s'.", sqlite3_errmsg(database));
+        // Additional error handling, as appropriate...
+    }
+	
+//	NSLog(@"%@", [[NSString alloc] initWithFormat:[[pages objectAtIndex:1] content]]);
+//	NSLog(@"%i", self.pages.count);
+}
+
+#pragma mark -
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

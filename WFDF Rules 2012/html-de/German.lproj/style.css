@@ -12,7 +12,6 @@ p, h1, ul, table {
 	font-family: Helvetica;
 	font-size: 28px;
 	margin: 25px 35px 0px 100px;
-	//border: solid 1px black;
 }
 
 p {
@@ -47,10 +46,6 @@ span {
 h1 {
 	margin-top: 45px;
 }
-
-/*li {
-	border: 1px solid black;
-}*/
 
 ul li {
 	list-style-type: none;
@@ -98,3 +93,16 @@ ul ul ul ul li span {
 ul ul, ul ul ul  {
 	margin-top: 0px;
 }
+
+@media only screen and (min-width: 786px) {
+	p, h1, ul, table {
+		font-size: 24px;
+	}
+	ul {
+		margin-right: 80px;
+	}
+	ul li {
+		margin-bottom: 24px;
+	}
+}
+

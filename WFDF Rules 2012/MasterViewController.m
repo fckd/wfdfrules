@@ -60,8 +60,7 @@
 	} else {
 		self.mainDetailViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"flags.png"]  style:UIBarButtonItemStyleBordered target:self action:@selector(settingsButtonPressed)];
 		// show initial page
-		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-		Page *page = (Page *)[_appDelegate.pages objectAtIndex:indexPath.row];
+		Page *page = (Page *)[_appDelegate.pages objectAtIndex:[[NSIndexPath indexPathForRow:0 inSection:0] row]];
 		mainDetailViewController.navigationItem.title = [page title];
 	}
 	
@@ -164,7 +163,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 	return [_appDelegate.pages count];
 }
 
@@ -183,21 +181,15 @@
 
 	// Configure the cell.
 	Page *page = (Page *)[_appDelegate.pages objectAtIndex:indexPath.row];
-	// html content
-	NSString *path = [[NSBundle mainBundle] pathForResource:[page path] ofType:@"html" inDirectory:_appDelegate.languageDirectory];
-	NSFileHandle *readHandle = [NSFileHandle fileHandleForReadingAtPath:path];
-	NSString *htmlString = [[NSString alloc] initWithData:[readHandle readDataToEndOfFile] encoding:NSUTF8StringEncoding];
-	page.content = htmlString;
-	
+	// html content	
 	// getting the title + increasing chapter number
-	NSString *title = page.title;
 	NSString *count = [NSString stringWithFormat:@"%d. ", indexPath.row];
 	// leave out the count on the first item:
 	if(indexPath.row == 0 || indexPath.row > 20) {
 		count = @"";
 	}
 
-	cell.textLabel.text = [count stringByAppendingString:title];
+	cell.textLabel.text = [count stringByAppendingString:page.title];
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
 	
     return cell;
@@ -244,29 +236,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	Page *page = (Page *)[_appDelegate.pages objectAtIndex:indexPath.row];
-	mainDetailViewController.navigationItem.title = [page title];
+//	NSLog(@"%@", page.title);
+//	NSLog(@"%@"	, [[_appDelegate.pages objectAtIndex:indexPath.row] title]);
+//	NSLog(@"%@", [[self.pages objectAtIndex:indexPath.row] title]);
+//	mainDetailViewController.navigationItem.title = [page title];
 	
-	NSString *path = [[NSBundle mainBundle] pathForResource:[page path] ofType:@"html" inDirectory:_appDelegate.languageDirectory];
-	NSFileHandle *readHandle = [NSFileHandle fileHandleForReadingAtPath:path];
+//	NSString *path = [[NSBundle mainBundle] pathForResource:[page path] ofType:@"html" inDirectory:_appDelegate.languageDirectory];
+//	NSFileHandle *readHandle = [NSFileHandle fileHandleForReadingAtPath:path];
 	
-	NSString *htmlString = [[NSString alloc] initWithData:[readHandle readDataToEndOfFile] encoding:NSUTF8StringEncoding];
+//	NSString *htmlString = [[NSString alloc] initWithData:[readHandle readDataToEndOfFile] encoding:NSUTF8StringEncoding];
 	// creating a baseURL makes loading local files like images + css possible. They then refer to their relative path.
-	NSURL *baseURL = [NSURL fileURLWithPath:path];
+//	NSURL *baseURL = [NSURL fileURLWithPath:path];
 	
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    if (!self.detailViewController) {
 	        self.detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController_iPhone" bundle:nil];
 	    }
 		
+		self.detailViewController.title = [page title];
         [self.navigationController pushViewController:self.detailViewController animated:YES];
-		[self.detailViewController.webView loadHTMLString:htmlString baseURL:baseURL];
+//		[self.detailViewController.webView loadHTMLString:htmlString baseURL:baseURL];
     } else {
 		if (!self.mainDetailViewController) {
 	        self.mainDetailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController_iPad" bundle:nil];
 	    }
 		self.appDelegate.currentRow = indexPath.row;
 		self.mainDetailViewController.detailItem = [_appDelegate.pages objectAtIndex:indexPath.row];
-		[self.mainDetailViewController.webView loadHTMLString:htmlString baseURL:baseURL];
+//		[self.mainDetailViewController.webView loadHTMLString:htmlString baseURL:baseURL];
+//		[self.mainDetailViewController.webView loadHTMLString:page.content baseURL:nil];
 		
 //		[self.navigationController pushViewController:self.detailViewController animated:YES];
 //		[self.detailViewController.webView loadHTMLString:htmlString baseURL:baseURL];

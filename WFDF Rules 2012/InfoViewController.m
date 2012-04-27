@@ -102,7 +102,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    self.contentSizeForViewInPopover = CGSizeMake(320, 420);
+    self.contentSizeForViewInPopover = CGSizeMake(320, 400);
 }
 
 
