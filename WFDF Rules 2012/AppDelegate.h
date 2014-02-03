@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <sqlite3.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
-	sqlite3 *database;
-}
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 
 -(void)createPages:(NSString *)language;
@@ -29,11 +26,8 @@
 @property(strong, nonatomic) NSString *languageDirectory;
 @property(strong, nonatomic) NSMutableArray *langs;
 //@property (assign, nonatomic, readonly) NSInteger primaryKey;
-
+@property (strong, nonatomic) NSString *title;
+@property(strong, nonatomic) NSString *content;
 @property(nonatomic) NSInteger currentRow;
-
-//@property(assign, nonatomic, readonly) NSInteger primaryKey;
-@property(nonatomic, retain) NSString *title;
-@property(nonatomic, retain) NSString *content;
 
 @end

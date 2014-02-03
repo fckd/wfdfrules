@@ -7,21 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <sqlite3.h>
 
 
 @interface Page : NSObject {
-	sqlite3 *database;
+
 }
 
 @property(nonatomic,assign) NSString *title;
 @property(nonatomic,assign) NSString *path;
 @property(nonatomic,assign) NSString *content;
 
-@property (assign, nonatomic, readonly) NSInteger primaryKey;
-
 -(id)initWithTitle:(NSString *)t path:(NSString *)p;
-
-- (id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3 *)db language:(NSString *)lang;
 
 @end

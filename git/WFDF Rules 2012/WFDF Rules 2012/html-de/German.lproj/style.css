@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1.3em;
+}
+
+body {
+	margin-bottom: 45px;
+}
+
+p, h1, ul, table {
+	font-family: Helvetica;
+	font-size: 28px;
+	margin: 25px 35px 0px 100px;
+}
+
+p {
+	margin-left: 60px;
+	margin-right: 60px;
+}
+h1.single, table {
+	margin-left: 60px;
+}
+h1.big {
+	font-size: 34px;
+}
+
+table {
+	font-size: 34px;
+}
+
+tr {
+	vertical-align: top;
+	margin-bottom: 50px;
+}
+
+td {
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+
+span {
+	font-weight: bold;
+}
+
+h1 {
+	margin-top: 45px;
+}
+
+ul li {
+	list-style-type: none;
+	margin-bottom: 20px;
+	text-indent: -80px;
+}
+
+ul li span {
+	width: 80px;
+	display: inline-block;
+	text-indent: 0;
+}
+ul ul{
+	margin-right: 0;
+	margin-left: 0;
+}
+ul ul li {
+	font-size: 1em;
+	font-size: 100%;
+	text-indent: -105px;
+	margin-left: 55px;
+}
+
+ul ul li span {
+	text-indent: 0;
+	width: 105px;
+}
+
+ul ul ul li {
+	text-indent: -130px;
+	margin-left: 110px;
+}
+ul ul ul li span {
+	width: 130px;
+}
+
+ul ul ul ul li {
+	text-indent: -150px;
+	margin-left: 160px;
+}
+ul ul ul ul li span {
+	width: 150px;
+}
+
+ul ul, ul ul ul  {
+	margin-top: 0px;
+}
+
+@media only screen and (min-width: 786px) {
+	p, h1, ul, table {
+		font-size: 24px;
+	}
+	ul {
+		margin-right: 80px;
+	}
+	ul li {
+		margin-bottom: 24px;
+	}
+}
+

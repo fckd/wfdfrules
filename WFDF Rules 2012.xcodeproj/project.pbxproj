@@ -58,8 +58,6 @@
 		B4A3A3E614EDBA9500366681 /* 21_definitionen.html in Resources */ = {isa = PBXBuildFile; fileRef = B4A3A3CB14EDBA9500366681 /* 21_definitionen.html */; };
 		B4A3A3E714EDBA9500366681 /* 22_copyright.html in Resources */ = {isa = PBXBuildFile; fileRef = B4A3A3CD14EDBA9500366681 /* 22_copyright.html */; };
 		B4A3A3E814EDBA9500366681 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = B4A3A3CF14EDBA9500366681 /* style.css */; };
-		B4C1F74F1549785E003F5E03 /* langs.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B4C1F74E1549785E003F5E03 /* langs.sqlite */; };
-		B4C1F75215497A1B003F5E03 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C1F75115497A1B003F5E03 /* libsqlite3.0.dylib */; };
 		B4E9300814ED6951005D4B60 /* flags.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E9300714ED6951005D4B60 /* flags.png */; };
 		B4E9300D14ED6A08005D4B60 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E9300A14ED6A08005D4B60 /* InfoViewController.m */; };
 		B4E9300E14ED6A08005D4B60 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E9300C14ED6A08005D4B60 /* SettingsViewController.m */; };
@@ -91,6 +89,84 @@
 		B4493FF3151356E500C3CFAC /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
 		B4493FF5151356EC00C3CFAC /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72.png; sourceTree = "<group>"; };
 		B4493FF71513645A00C3CFAC /* info-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-icon.png"; path = "documents/info-icon.png"; sourceTree = "<group>"; };
+		B44B2D8E155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/10_check.html"; sourceTree = "<absolute>"; };
+		B44B2D8F155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/13_turnover.html"; sourceTree = "<absolute>"; };
+		B44B2D90155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/22_copyright.html"; sourceTree = "<absolute>"; };
+		B44B2D91155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/17_fouls.html"; sourceTree = "<absolute>"; };
+		B44B2D92155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/style.css"; sourceTree = "<absolute>"; };
+		B44B2D93155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/00_einleitung.html"; sourceTree = "<absolute>"; };
+		B44B2D94155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/03_ausruestung.html"; sourceTree = "<absolute>"; };
+		B44B2D95155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/06_spielbeginn.html"; sourceTree = "<absolute>"; };
+		B44B2D96155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/19_unterbrechungen.html"; sourceTree = "<absolute>"; };
+		B44B2D97155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		B44B2D98155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/21_definitionen.html"; sourceTree = "<absolute>"; };
+		B44B2D99155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/01_spirit.html"; sourceTree = "<absolute>"; };
+		B44B2D9A155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/07_anwurf.html"; sourceTree = "<absolute>"; };
+		B44B2D9B155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/08_scheibe.html"; sourceTree = "<absolute>"; };
+		B44B2D9C155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/04_punkt.html"; sourceTree = "<absolute>"; };
+		B44B2D9D155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/20_timeouts.html"; sourceTree = "<absolute>"; };
+		B44B2D9E155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/18_infractions.html"; sourceTree = "<absolute>"; };
+		B44B2D9F155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/11_aus.html"; sourceTree = "<absolute>"; };
+		B44B2DA0155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/15_regelverletzungen.html"; sourceTree = "<absolute>"; };
+		B44B2DA1155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/12_faenger.html"; sourceTree = "<absolute>"; };
+		B44B2DA2155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/05_mannschaften.html"; sourceTree = "<absolute>"; };
+		B44B2DA3155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		B44B2DA4155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/16_weiterspielen.html"; sourceTree = "<absolute>"; };
+		B44B2DA5155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/09_anzaehlen.html"; sourceTree = "<absolute>"; };
+		B44B2DA6155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/14_punktgewinn.html"; sourceTree = "<absolute>"; };
+		B44B2DA7155126AB00800AB5 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = da; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/da.lproj/02_spielfeld.html"; sourceTree = "<absolute>"; };
+		B44B2DA9155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/10_check.html"; sourceTree = "<absolute>"; };
+		B44B2DAA155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/13_turnover.html"; sourceTree = "<absolute>"; };
+		B44B2DAB155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/22_copyright.html"; sourceTree = "<absolute>"; };
+		B44B2DAC155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/17_fouls.html"; sourceTree = "<absolute>"; };
+		B44B2DAD155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/style.css"; sourceTree = "<absolute>"; };
+		B44B2DAE155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/00_einleitung.html"; sourceTree = "<absolute>"; };
+		B44B2DAF155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/03_ausruestung.html"; sourceTree = "<absolute>"; };
+		B44B2DB0155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/06_spielbeginn.html"; sourceTree = "<absolute>"; };
+		B44B2DB1155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/19_unterbrechungen.html"; sourceTree = "<absolute>"; };
+		B44B2DB2155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		B44B2DB3155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/21_definitionen.html"; sourceTree = "<absolute>"; };
+		B44B2DB4155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/01_spirit.html"; sourceTree = "<absolute>"; };
+		B44B2DB5155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/07_anwurf.html"; sourceTree = "<absolute>"; };
+		B44B2DB6155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/08_scheibe.html"; sourceTree = "<absolute>"; };
+		B44B2DB7155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/04_punkt.html"; sourceTree = "<absolute>"; };
+		B44B2DB8155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/20_timeouts.html"; sourceTree = "<absolute>"; };
+		B44B2DB9155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/18_infractions.html"; sourceTree = "<absolute>"; };
+		B44B2DBA155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/11_aus.html"; sourceTree = "<absolute>"; };
+		B44B2DBB155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/15_regelverletzungen.html"; sourceTree = "<absolute>"; };
+		B44B2DBC155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/12_faenger.html"; sourceTree = "<absolute>"; };
+		B44B2DBD155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/05_mannschaften.html"; sourceTree = "<absolute>"; };
+		B44B2DBE155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		B44B2DBF155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/16_weiterspielen.html"; sourceTree = "<absolute>"; };
+		B44B2DC0155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/09_anzaehlen.html"; sourceTree = "<absolute>"; };
+		B44B2DC1155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/14_punktgewinn.html"; sourceTree = "<absolute>"; };
+		B44B2DC2155127E600800AB5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = cs; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/cs.lproj/02_spielfeld.html"; sourceTree = "<absolute>"; };
+		B44B2DC3155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/10_check.html"; sourceTree = "<absolute>"; };
+		B44B2DC4155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/13_turnover.html"; sourceTree = "<absolute>"; };
+		B44B2DC5155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/22_copyright.html"; sourceTree = "<absolute>"; };
+		B44B2DC6155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/17_fouls.html"; sourceTree = "<absolute>"; };
+		B44B2DC7155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/style.css"; sourceTree = "<absolute>"; };
+		B44B2DC8155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/00_einleitung.html"; sourceTree = "<absolute>"; };
+		B44B2DC9155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/03_ausruestung.html"; sourceTree = "<absolute>"; };
+		B44B2DCA155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/06_spielbeginn.html"; sourceTree = "<absolute>"; };
+		B44B2DCB155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/19_unterbrechungen.html"; sourceTree = "<absolute>"; };
+		B44B2DCC155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		B44B2DCD155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/21_definitionen.html"; sourceTree = "<absolute>"; };
+		B44B2DCE155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/01_spirit.html"; sourceTree = "<absolute>"; };
+		B44B2DCF155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/07_anwurf.html"; sourceTree = "<absolute>"; };
+		B44B2DD0155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/08_scheibe.html"; sourceTree = "<absolute>"; };
+		B44B2DD1155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/04_punkt.html"; sourceTree = "<absolute>"; };
+		B44B2DD2155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/20_timeouts.html"; sourceTree = "<absolute>"; };
+		B44B2DD3155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/18_infractions.html"; sourceTree = "<absolute>"; };
+		B44B2DD4155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/11_aus.html"; sourceTree = "<absolute>"; };
+		B44B2DD5155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/15_regelverletzungen.html"; sourceTree = "<absolute>"; };
+		B44B2DD6155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/12_faenger.html"; sourceTree = "<absolute>"; };
+		B44B2DD7155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/05_mannschaften.html"; sourceTree = "<absolute>"; };
+		B44B2DD8155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		B44B2DD9155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/16_weiterspielen.html"; sourceTree = "<absolute>"; };
+		B44B2DDA155127EA00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/09_anzaehlen.html"; sourceTree = "<absolute>"; };
+		B44B2DDB155127EB00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/14_punktgewinn.html"; sourceTree = "<absolute>"; };
+		B44B2DDC155127EB00800AB5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = es; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/es.lproj/02_spielfeld.html"; sourceTree = "<absolute>"; };
 		B4A3A33414ED6E7100366681 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B4A3A38314EDB13400366681 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4A3A38C14EDB18B00366681 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
@@ -150,13 +226,63 @@
 		B4A3A3FE14EDBAD200366681 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = "html-de/German.lproj/21_definitionen.html"; sourceTree = "<group>"; };
 		B4A3A3FF14EDBAD200366681 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = German; path = "html-de/German.lproj/22_copyright.html"; sourceTree = "<group>"; };
 		B4A3A40014EDBAD200366681 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = German; path = "html-de/German.lproj/style.css"; sourceTree = "<group>"; };
-		B4C1F74E1549785E003F5E03 /* langs.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = langs.sqlite; sourceTree = "<group>"; };
-		B4C1F75115497A1B003F5E03 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B4E4FBF7154ACF3C00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/01_spirit.html"; sourceTree = "<absolute>"; };
+		B4E4FBF8154ACF3C00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/15_regelverletzungen.html"; sourceTree = "<absolute>"; };
+		B4E4FBF9154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/03_ausruestung.html"; sourceTree = "<absolute>"; };
+		B4E4FBFA154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/14_punktgewinn.html"; sourceTree = "<absolute>"; };
+		B4E4FBFB154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/19_unterbrechungen.html"; sourceTree = "<absolute>"; };
+		B4E4FBFC154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/13_turnover.html"; sourceTree = "<absolute>"; };
+		B4E4FBFD154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/22_copyright.html"; sourceTree = "<absolute>"; };
+		B4E4FBFE154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/18_infractions.html"; sourceTree = "<absolute>"; };
+		B4E4FBFF154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/08_scheibe.html"; sourceTree = "<absolute>"; };
+		B4E4FC00154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/07_anwurf.html"; sourceTree = "<absolute>"; };
+		B4E4FC01154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/20_timeouts.html"; sourceTree = "<absolute>"; };
+		B4E4FC02154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/16_weiterspielen.html"; sourceTree = "<absolute>"; };
+		B4E4FC03154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		B4E4FC04154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/02_spielfeld.html"; sourceTree = "<absolute>"; };
+		B4E4FC05154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		B4E4FC06154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/11_aus.html"; sourceTree = "<absolute>"; };
+		B4E4FC07154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/10_check.html"; sourceTree = "<absolute>"; };
+		B4E4FC08154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/09_anzaehlen.html"; sourceTree = "<absolute>"; };
+		B4E4FC09154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/06_spielbeginn.html"; sourceTree = "<absolute>"; };
+		B4E4FC0A154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/17_fouls.html"; sourceTree = "<absolute>"; };
+		B4E4FC0B154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/12_faenger.html"; sourceTree = "<absolute>"; };
+		B4E4FC0C154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/00_einleitung.html"; sourceTree = "<absolute>"; };
+		B4E4FC0D154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/04_punkt.html"; sourceTree = "<absolute>"; };
+		B4E4FC0E154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/21_definitionen.html"; sourceTree = "<absolute>"; };
+		B4E4FC0F154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/05_mannschaften.html"; sourceTree = "<absolute>"; };
+		B4E4FC10154ACF3D00C091A9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = fr; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/fr.lproj/style.css"; sourceTree = "<absolute>"; };
 		B4E9300714ED6951005D4B60 /* flags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flags.png; sourceTree = "<group>"; };
 		B4E9300914ED6A08005D4B60 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		B4E9300A14ED6A08005D4B60 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		B4E9300B14ED6A08005D4B60 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		B4E9300C14ED6A08005D4B60 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; wrapsLines = 1; };
+		B4E9B86E154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/18_infractions.html"; sourceTree = "<absolute>"; };
+		B4E9B86F154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/07_anwurf.html"; sourceTree = "<absolute>"; };
+		B4E9B870154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/00_einleitung.html"; sourceTree = "<absolute>"; };
+		B4E9B871154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/04_punkt.html"; sourceTree = "<absolute>"; };
+		B4E9B872154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/13_turnover.html"; sourceTree = "<absolute>"; };
+		B4E9B873154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/01_spirit.html"; sourceTree = "<absolute>"; };
+		B4E9B874154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		B4E9B875154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/02_spielfeld.html"; sourceTree = "<absolute>"; };
+		B4E9B876154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/16_weiterspielen.html"; sourceTree = "<absolute>"; };
+		B4E9B877154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/06_spielbeginn.html"; sourceTree = "<absolute>"; };
+		B4E9B878154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/style.css"; sourceTree = "<absolute>"; };
+		B4E9B879154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/08_scheibe.html"; sourceTree = "<absolute>"; };
+		B4E9B87A154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/20_timeouts.html"; sourceTree = "<absolute>"; };
+		B4E9B87B154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/17_fouls.html"; sourceTree = "<absolute>"; };
+		B4E9B87C154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/21_definitionen.html"; sourceTree = "<absolute>"; };
+		B4E9B87D154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		B4E9B87E154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/19_unterbrechungen.html"; sourceTree = "<absolute>"; };
+		B4E9B87F154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/05_mannschaften.html"; sourceTree = "<absolute>"; };
+		B4E9B880154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/14_punktgewinn.html"; sourceTree = "<absolute>"; };
+		B4E9B881154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/22_copyright.html"; sourceTree = "<absolute>"; };
+		B4E9B882154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/03_ausruestung.html"; sourceTree = "<absolute>"; };
+		B4E9B883154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/10_check.html"; sourceTree = "<absolute>"; };
+		B4E9B884154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/12_faenger.html"; sourceTree = "<absolute>"; };
+		B4E9B885154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/09_anzaehlen.html"; sourceTree = "<absolute>"; };
+		B4E9B886154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/11_aus.html"; sourceTree = "<absolute>"; };
+		B4E9B887154ECA3700938D25 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = it; path = "/Developer/git/WFDF Rules 2012/WFDF Rules 2012/it.lproj/15_regelverletzungen.html"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +290,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C1F75215497A1B003F5E03 /* libsqlite3.0.dylib in Frameworks */,
 				B4A3A33514ED6E7100366681 /* MessageUI.framework in Frameworks */,
 				B429F71F14ED28EB002B654F /* UIKit.framework in Frameworks */,
 				B429F72114ED28EB002B654F /* Foundation.framework in Frameworks */,
@@ -235,7 +360,6 @@
 				B4A3A38C14EDB18B00366681 /* InfoViewController.xib */,
 				B440D5DF14F3D8C300A334CE /* InfoViewController_iPad.xib */,
 				B4493FF71513645A00C3CFAC /* info-icon.png */,
-				B4C1F75115497A1B003F5E03 /* libsqlite3.0.dylib */,
 				B429F72514ED28EB002B654F /* Supporting Files */,
 			);
 			path = "WFDF Rules 2012";
@@ -246,7 +370,6 @@
 			children = (
 				B4E9300714ED6951005D4B60 /* flags.png */,
 				B4A3A39D14EDB41E00366681 /* Localizable.strings */,
-				B4C1F74E1549785E003F5E03 /* langs.sqlite */,
 				B4A3A38214EDB13400366681 /* InfoPlist.strings */,
 				B429F72614ED28EB002B654F /* WFDF Rules 2012-Info.plist */,
 				B429F72A14ED28EB002B654F /* main.m */,
@@ -382,7 +505,6 @@
 				B4493FF4151356E500C3CFAC /* 114.png in Resources */,
 				B4493FF6151356EC00C3CFAC /* 72.png in Resources */,
 				B4493FF81513645A00C3CFAC /* info-icon.png in Resources */,
-				B4C1F74F1549785E003F5E03 /* langs.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +533,11 @@
 			children = (
 				B4A3A38314EDB13400366681 /* en */,
 				B4A3A39514EDB20100366681 /* de */,
+				B4E4FC05154ACF3D00C091A9 /* fr */,
+				B4E9B87D154ECA3700938D25 /* it */,
+				B44B2D97155126AB00800AB5 /* da */,
+				B44B2DB2155127E600800AB5 /* cs */,
+				B44B2DCC155127EA00800AB5 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -420,6 +547,11 @@
 			children = (
 				B4A3A39C14EDB41E00366681 /* en */,
 				B4A3A39E14EDB42300366681 /* de */,
+				B4E4FC03154ACF3D00C091A9 /* fr */,
+				B4E9B874154ECA3700938D25 /* it */,
+				B44B2DA3155126AB00800AB5 /* da */,
+				B44B2DBE155127E600800AB5 /* cs */,
+				B44B2DD8155127EA00800AB5 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -429,6 +561,11 @@
 			children = (
 				B4A3A3A214EDBA8C00366681 /* English */,
 				B4A3A3E914EDBAD200366681 /* German */,
+				B4E4FC0C154ACF3D00C091A9 /* fr */,
+				B4E9B870154ECA3700938D25 /* it */,
+				B44B2D93155126AB00800AB5 /* da */,
+				B44B2DAE155127E600800AB5 /* cs */,
+				B44B2DC8155127EA00800AB5 /* es */,
 			);
 			name = 00_einleitung.html;
 			path = ..;
@@ -439,6 +576,11 @@
 			children = (
 				B4A3A3A414EDBA8C00366681 /* English */,
 				B4A3A3EA14EDBAD200366681 /* German */,
+				B4E4FBF7154ACF3C00C091A9 /* fr */,
+				B4E9B873154ECA3700938D25 /* it */,
+				B44B2D99155126AB00800AB5 /* da */,
+				B44B2DB4155127E600800AB5 /* cs */,
+				B44B2DCE155127EA00800AB5 /* es */,
 			);
 			name = 01_spirit.html;
 			path = ..;
@@ -449,6 +591,11 @@
 			children = (
 				B4A3A3A614EDBA8D00366681 /* English */,
 				B4A3A3EB14EDBAD200366681 /* German */,
+				B4E4FC04154ACF3D00C091A9 /* fr */,
+				B4E9B875154ECA3700938D25 /* it */,
+				B44B2DA7155126AB00800AB5 /* da */,
+				B44B2DC2155127E600800AB5 /* cs */,
+				B44B2DDC155127EB00800AB5 /* es */,
 			);
 			name = 02_spielfeld.html;
 			path = ..;
@@ -459,6 +606,11 @@
 			children = (
 				B4A3A3A814EDBA8D00366681 /* English */,
 				B4A3A3EC14EDBAD200366681 /* German */,
+				B4E4FBF9154ACF3D00C091A9 /* fr */,
+				B4E9B882154ECA3700938D25 /* it */,
+				B44B2D94155126AB00800AB5 /* da */,
+				B44B2DAF155127E600800AB5 /* cs */,
+				B44B2DC9155127EA00800AB5 /* es */,
 			);
 			name = 03_ausruestung.html;
 			path = ..;
@@ -469,6 +621,11 @@
 			children = (
 				B4A3A3AA14EDBA8E00366681 /* English */,
 				B4A3A3ED14EDBAD200366681 /* German */,
+				B4E4FC0D154ACF3D00C091A9 /* fr */,
+				B4E9B871154ECA3700938D25 /* it */,
+				B44B2D9C155126AB00800AB5 /* da */,
+				B44B2DB7155127E600800AB5 /* cs */,
+				B44B2DD1155127EA00800AB5 /* es */,
 			);
 			name = 04_punkt.html;
 			path = ..;
@@ -479,6 +636,11 @@
 			children = (
 				B4A3A3AC14EDBA8F00366681 /* English */,
 				B4A3A3EE14EDBAD200366681 /* German */,
+				B4E4FC0F154ACF3D00C091A9 /* fr */,
+				B4E9B87F154ECA3700938D25 /* it */,
+				B44B2DA2155126AB00800AB5 /* da */,
+				B44B2DBD155127E600800AB5 /* cs */,
+				B44B2DD7155127EA00800AB5 /* es */,
 			);
 			name = 05_mannschaften.html;
 			path = ..;
@@ -489,6 +651,11 @@
 			children = (
 				B4A3A3AE14EDBA9000366681 /* English */,
 				B4A3A3EF14EDBAD200366681 /* German */,
+				B4E4FC09154ACF3D00C091A9 /* fr */,
+				B4E9B877154ECA3700938D25 /* it */,
+				B44B2D95155126AB00800AB5 /* da */,
+				B44B2DB0155127E600800AB5 /* cs */,
+				B44B2DCA155127EA00800AB5 /* es */,
 			);
 			name = 06_spielbeginn.html;
 			path = ..;
@@ -499,6 +666,11 @@
 			children = (
 				B4A3A3B014EDBA9000366681 /* English */,
 				B4A3A3F014EDBAD200366681 /* German */,
+				B4E4FC00154ACF3D00C091A9 /* fr */,
+				B4E9B86F154ECA3700938D25 /* it */,
+				B44B2D9A155126AB00800AB5 /* da */,
+				B44B2DB5155127E600800AB5 /* cs */,
+				B44B2DCF155127EA00800AB5 /* es */,
 			);
 			name = 07_anwurf.html;
 			path = ..;
@@ -509,6 +681,11 @@
 			children = (
 				B4A3A3B214EDBA9100366681 /* English */,
 				B4A3A3F114EDBAD200366681 /* German */,
+				B4E4FBFF154ACF3D00C091A9 /* fr */,
+				B4E9B879154ECA3700938D25 /* it */,
+				B44B2D9B155126AB00800AB5 /* da */,
+				B44B2DB6155127E600800AB5 /* cs */,
+				B44B2DD0155127EA00800AB5 /* es */,
 			);
 			name = 08_scheibe.html;
 			path = ..;
@@ -519,6 +696,11 @@
 			children = (
 				B4A3A3B414EDBA9100366681 /* English */,
 				B4A3A3F214EDBAD200366681 /* German */,
+				B4E4FC08154ACF3D00C091A9 /* fr */,
+				B4E9B885154ECA3700938D25 /* it */,
+				B44B2DA5155126AB00800AB5 /* da */,
+				B44B2DC0155127E600800AB5 /* cs */,
+				B44B2DDA155127EA00800AB5 /* es */,
 			);
 			name = 09_anzaehlen.html;
 			path = ..;
@@ -529,6 +711,11 @@
 			children = (
 				B4A3A3B614EDBA9100366681 /* English */,
 				B4A3A3F314EDBAD200366681 /* German */,
+				B4E4FC07154ACF3D00C091A9 /* fr */,
+				B4E9B883154ECA3700938D25 /* it */,
+				B44B2D8E155126AB00800AB5 /* da */,
+				B44B2DA9155127E600800AB5 /* cs */,
+				B44B2DC3155127EA00800AB5 /* es */,
 			);
 			name = 10_check.html;
 			path = ..;
@@ -539,6 +726,11 @@
 			children = (
 				B4A3A3B814EDBA9200366681 /* English */,
 				B4A3A3F414EDBAD200366681 /* German */,
+				B4E4FC06154ACF3D00C091A9 /* fr */,
+				B4E9B886154ECA3700938D25 /* it */,
+				B44B2D9F155126AB00800AB5 /* da */,
+				B44B2DBA155127E600800AB5 /* cs */,
+				B44B2DD4155127EA00800AB5 /* es */,
 			);
 			name = 11_aus.html;
 			path = ..;
@@ -549,6 +741,11 @@
 			children = (
 				B4A3A3BA14EDBA9300366681 /* English */,
 				B4A3A3F514EDBAD200366681 /* German */,
+				B4E4FC0B154ACF3D00C091A9 /* fr */,
+				B4E9B884154ECA3700938D25 /* it */,
+				B44B2DA1155126AB00800AB5 /* da */,
+				B44B2DBC155127E600800AB5 /* cs */,
+				B44B2DD6155127EA00800AB5 /* es */,
 			);
 			name = 12_faenger.html;
 			path = ..;
@@ -559,6 +756,11 @@
 			children = (
 				B4A3A3BC14EDBA9300366681 /* English */,
 				B4A3A3F614EDBAD200366681 /* German */,
+				B4E4FBFC154ACF3D00C091A9 /* fr */,
+				B4E9B872154ECA3700938D25 /* it */,
+				B44B2D8F155126AB00800AB5 /* da */,
+				B44B2DAA155127E600800AB5 /* cs */,
+				B44B2DC4155127EA00800AB5 /* es */,
 			);
 			name = 13_turnover.html;
 			path = ..;
@@ -569,6 +771,11 @@
 			children = (
 				B4A3A3BE14EDBA9300366681 /* English */,
 				B4A3A3F714EDBAD200366681 /* German */,
+				B4E4FBFA154ACF3D00C091A9 /* fr */,
+				B4E9B880154ECA3700938D25 /* it */,
+				B44B2DA6155126AB00800AB5 /* da */,
+				B44B2DC1155127E600800AB5 /* cs */,
+				B44B2DDB155127EB00800AB5 /* es */,
 			);
 			name = 14_punktgewinn.html;
 			path = ..;
@@ -579,6 +786,11 @@
 			children = (
 				B4A3A3C014EDBA9300366681 /* English */,
 				B4A3A3F814EDBAD200366681 /* German */,
+				B4E4FBF8154ACF3C00C091A9 /* fr */,
+				B4E9B887154ECA3700938D25 /* it */,
+				B44B2DA0155126AB00800AB5 /* da */,
+				B44B2DBB155127E600800AB5 /* cs */,
+				B44B2DD5155127EA00800AB5 /* es */,
 			);
 			name = 15_regelverletzungen.html;
 			path = ..;
@@ -589,6 +801,11 @@
 			children = (
 				B4A3A3C214EDBA9400366681 /* English */,
 				B4A3A3F914EDBAD200366681 /* German */,
+				B4E4FC02154ACF3D00C091A9 /* fr */,
+				B4E9B876154ECA3700938D25 /* it */,
+				B44B2DA4155126AB00800AB5 /* da */,
+				B44B2DBF155127E600800AB5 /* cs */,
+				B44B2DD9155127EA00800AB5 /* es */,
 			);
 			name = 16_weiterspielen.html;
 			path = ..;
@@ -599,6 +816,11 @@
 			children = (
 				B4A3A3C414EDBA9400366681 /* English */,
 				B4A3A3FA14EDBAD200366681 /* German */,
+				B4E4FC0A154ACF3D00C091A9 /* fr */,
+				B4E9B87B154ECA3700938D25 /* it */,
+				B44B2D91155126AB00800AB5 /* da */,
+				B44B2DAC155127E600800AB5 /* cs */,
+				B44B2DC6155127EA00800AB5 /* es */,
 			);
 			name = 17_fouls.html;
 			path = ..;
@@ -609,6 +831,11 @@
 			children = (
 				B4A3A3C614EDBA9400366681 /* English */,
 				B4A3A3FB14EDBAD200366681 /* German */,
+				B4E4FBFE154ACF3D00C091A9 /* fr */,
+				B4E9B86E154ECA3700938D25 /* it */,
+				B44B2D9E155126AB00800AB5 /* da */,
+				B44B2DB9155127E600800AB5 /* cs */,
+				B44B2DD3155127EA00800AB5 /* es */,
 			);
 			name = 18_infractions.html;
 			path = ..;
@@ -619,6 +846,11 @@
 			children = (
 				B4A3A3C814EDBA9400366681 /* English */,
 				B4A3A3FC14EDBAD200366681 /* German */,
+				B4E4FBFB154ACF3D00C091A9 /* fr */,
+				B4E9B87E154ECA3700938D25 /* it */,
+				B44B2D96155126AB00800AB5 /* da */,
+				B44B2DB1155127E600800AB5 /* cs */,
+				B44B2DCB155127EA00800AB5 /* es */,
 			);
 			name = 19_unterbrechungen.html;
 			path = ..;
@@ -629,6 +861,11 @@
 			children = (
 				B4A3A3CA14EDBA9500366681 /* English */,
 				B4A3A3FD14EDBAD200366681 /* German */,
+				B4E4FC01154ACF3D00C091A9 /* fr */,
+				B4E9B87A154ECA3700938D25 /* it */,
+				B44B2D9D155126AB00800AB5 /* da */,
+				B44B2DB8155127E600800AB5 /* cs */,
+				B44B2DD2155127EA00800AB5 /* es */,
 			);
 			name = 20_timeouts.html;
 			path = ..;
@@ -639,6 +876,11 @@
 			children = (
 				B4A3A3CC14EDBA9500366681 /* English */,
 				B4A3A3FE14EDBAD200366681 /* German */,
+				B4E4FC0E154ACF3D00C091A9 /* fr */,
+				B4E9B87C154ECA3700938D25 /* it */,
+				B44B2D98155126AB00800AB5 /* da */,
+				B44B2DB3155127E600800AB5 /* cs */,
+				B44B2DCD155127EA00800AB5 /* es */,
 			);
 			name = 21_definitionen.html;
 			path = ..;
@@ -649,6 +891,11 @@
 			children = (
 				B4A3A3CE14EDBA9500366681 /* English */,
 				B4A3A3FF14EDBAD200366681 /* German */,
+				B4E4FBFD154ACF3D00C091A9 /* fr */,
+				B4E9B881154ECA3700938D25 /* it */,
+				B44B2D90155126AB00800AB5 /* da */,
+				B44B2DAB155127E600800AB5 /* cs */,
+				B44B2DC5155127EA00800AB5 /* es */,
 			);
 			name = 22_copyright.html;
 			path = ..;
@@ -659,6 +906,11 @@
 			children = (
 				B4A3A3D014EDBA9500366681 /* English */,
 				B4A3A40014EDBAD200366681 /* German */,
+				B4E4FC10154ACF3D00C091A9 /* fr */,
+				B4E9B878154ECA3700938D25 /* it */,
+				B44B2D92155126AB00800AB5 /* da */,
+				B44B2DAD155127E600800AB5 /* cs */,
+				B44B2DC7155127EA00800AB5 /* es */,
 			);
 			name = style.css;
 			path = ..;

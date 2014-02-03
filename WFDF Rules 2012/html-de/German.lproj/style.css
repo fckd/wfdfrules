@@ -21,9 +21,6 @@ p {
 h1.single, table {
 	margin-left: 60px;
 }
-h1.big {
-	font-size: 34px;
-}
 
 table {
 	font-size: 34px;
@@ -96,13 +93,13 @@ ul ul, ul ul ul  {
 
 @media only screen and (min-width: 786px) {
 	p, h1, ul, table {
-		font-size: 24px;
+		font-size: 22px;
 	}
 	ul {
 		margin-right: 80px;
 	}
 	ul li {
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 	}
 }
 
